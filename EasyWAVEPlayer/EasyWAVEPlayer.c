@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 int menu() {
 	int option;
 	int option2;
-	char fileName[100];
+	char fileName[_MAX_PATH];
 
 	size_t size;
 	short formatType;
