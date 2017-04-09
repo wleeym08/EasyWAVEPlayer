@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EasyWAVEPlayer", "EasyWAVEPlayer\EasyWAVEPlayer.vcxproj", "{736BDD7C-5845-48BF-BF2F-E9C8BB6E4337}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{CAEDFF93-2853-4301-9752-38ADCB79F25B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{736BDD7C-5845-48BF-BF2F-E9C8BB6E4337}.Release|x64.Build.0 = Release|x64
 		{736BDD7C-5845-48BF-BF2F-E9C8BB6E4337}.Release|x86.ActiveCfg = Release|Win32
 		{736BDD7C-5845-48BF-BF2F-E9C8BB6E4337}.Release|x86.Build.0 = Release|Win32
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Debug|x64.ActiveCfg = Debug|x64
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Debug|x64.Build.0 = Debug|x64
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Debug|x86.ActiveCfg = Debug|Win32
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Debug|x86.Build.0 = Debug|Win32
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Release|x64.ActiveCfg = Release|x64
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Release|x64.Build.0 = Release|x64
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Release|x86.ActiveCfg = Release|Win32
+		{CAEDFF93-2853-4301-9752-38ADCB79F25B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
