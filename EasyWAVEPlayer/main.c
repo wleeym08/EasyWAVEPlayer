@@ -17,7 +17,7 @@ int menu() {
 	ALuint buffer;
 	ALuint source;
 	ALfloat volume;
-	ALuint loop;
+	ALint loop;
 
 	if (!alInit()) {
 		fprintf(stderr, "ERROR: CANNOT INITIALIZE\n");
