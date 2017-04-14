@@ -1,27 +1,34 @@
 #include <stdio.h>
 #include "alutil.h"
 
-int alInit(ALCdevice** device, ALCcontext** context) {
-	*device = alcOpenDevice(NULL);
-	if (!(*device)) {
+int alInit() {
+	ALCdevice* device;
+	ALCcontext* context;
+
+	device = alcOpenDevice(NULL);
+	if (device == NULL) {
 		fprintf(stderr, "ERROR: NO DEVICE\n");
 		return 0;
 	}
-	*context = alcCreateContext(*device, NULL);
-	if (!alcMakeContextCurrent(*context)) {
+	context = alcCreateContext(device, NULL);
+	if (!alcMakeContextCurrent(context)) {
 		fprintf(stderr, "ERROR: NO CONTEXT\n");
+		alcCloseDevice(device);
 		return 0;
 	}
 
 	return 1;
 }
 
-void alExit(ALCdevice** device, ALCcontext** context) {
+void alExit() {
+	ALCdevice* device;
+	ALCcontext* context;
+
+	context = alcGetCurrentContext();
+	device = alcGetContextsDevice(context);
 	alcMakeContextCurrent(NULL);
-	if (*context)
-		alcDestroyContext(*context);
-	if (*device)
-		alcCloseDevice(*device);
+	alcDestroyContext(context);
+	alcCloseDevice(device);
 }
 
 ALuint bufferWavData(char fileName[]) {

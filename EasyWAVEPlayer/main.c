@@ -13,26 +13,19 @@ int main(int argc, char** argv) {
 int menu() {
 	int option;
 	int option2;
-	char fileName[_MAX_PATH];
-	ALCdevice** device;
-	ALCcontext** context;
+	char fileName[_MAX_PATH]; // _MAX_PATH = 260
 	ALuint buffer;
 	ALuint source;
 	ALfloat volume;
 	ALuint loop;
 
-	device = (ALCdevice**)malloc(sizeof(ALCdevice*));
-	*device = NULL;
-	context = (ALCcontext**)malloc(sizeof(ALCcontext*));
-	*context = NULL;
-
-	if (!alInit(device, context)) {
+	if (!alInit()) {
 		fprintf(stderr, "ERROR: CANNOT INITIALIZE\n");
 		return -1;
 	}
 
 	printf("+-----------------------------+\n"
-		"|   Easy WAVE Player v0.02    |\n"
+		"|   Easy WAVE Player v0.03    |\n"
 		"|        By WingHearn         |\n"
 		"+-----------------------------+\n\n"
 		"** WARNING **\n"
@@ -113,8 +106,8 @@ int menu() {
 				} while (option2 != 7);
 
 				alSourceStop(source);
-				alDeleteBuffers(1, &buffer);
 				alDeleteSources(1, &source);
+				alDeleteBuffers(1, &buffer);
 			}
 
 			option = 0;
@@ -130,9 +123,7 @@ int menu() {
 
 	} while (option != 2);
 
-	alExit(device, context);
-	free(context);
-	free(device);
+	alExit();
 
 	return 0;
 }

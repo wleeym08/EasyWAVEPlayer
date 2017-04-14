@@ -2,9 +2,9 @@
 #define ALUTIL_H
 #include <al.h>
 #include <alc.h>
-	
-int alInit(ALCdevice**, ALCcontext**);
-void alExit(ALCdevice**, ALCcontext**);
+
+int alInit(void);
+void alExit(void);
 ALuint bufferWavData(char[]);
 ALuint createNormalSource(ALuint);
 
