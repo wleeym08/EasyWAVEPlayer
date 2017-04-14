@@ -1,6 +1,8 @@
 # EasyWAVEPlayer
 A simple WAVE file player using OpenAL
 ## What's new
+Ver 0.03 (2017/04/14)</br>
+-- Fix some errors</br></br>
 Ver 0.02 (2017/04/10)</br>
 -- Improve program structure</br></br>
 Ver 0.01 (2017/04/07)</br>
